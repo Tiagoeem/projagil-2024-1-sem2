@@ -1,16 +1,63 @@
-# Exercício de Web Services com Flask e SQLite
+# Exercício de Web Services (não REST, ainda...) com Flask e PostgreSQL
 
-O objetivo deste exercício é criar um serviço web simples para gerenciar uma biblioteca. A aplicação terá a capacidade de cadastrar livros e usuários da biblioteca. A ideia é que os alunos explorem a criação de endpoints que interajam com um banco de dados SQLite, abrangendo as operações de CRUD (Create, Read, Update, Delete).
+O objetivo deste exercício é criar um serviço web simples para gerenciar uma biblioteca. A aplicação terá a capacidade de cadastrar livros e usuários da biblioteca. A ideia é que os alunos explorem a criação de endpoints que interajam com um banco de dados PostgreSQL na nuvem (ElephantSQL), abrangendo as operações de CRUD (Create, Read, Update, Delete).
+
+## Fonte de Informação
+
+### Ajuda com a plataforma ElephantSQL
+
+- Introdução e Configurações Iniciais: https://www.elephantsql.com/blog/databases-for-beginners-what-is-a-database-what-is-postgresql.html
+
+- Conectando o pgAdmin ao seu server Elephant: https://www.elephantsql.com/docs/pgadmin.html
+
+- Documentação oficial: https://www.elephantsql.com/docs/index.html
+
+### Ajuda com pgAdmin
+
+- Introdução ao pgAdmin: https://www.w3schools.com/postgresql/postgresql_pgadmin4.php
+
+- Documentação oficial: https://www.pgadmin.org/docs/pgadmin4/8.3/index.html
+
+### Ajuda com o Python utilizando a base PostgreSql (psycog2)
+
+- Tutorial excelente sobre psycog2: https://www.tutorialspoint.com/postgresql/postgresql_python.htm
+
+- Documentação oficial: https://www.psycopg.org/docs/
+
+### Ajuda com Flask
+
+- Intro: https://www.tutorialspoint.com/flask/flask_application.htm
+
+- Recebendo JSON via requisição: https://stackabuse.com/how-to-get-and-parse-http-post-body-in-flask-json-and-form-data/
+
+- Variáveis na URL (urls dinâmicas): https://www.geeksforgeeks.org/generating-dynamic-urls-in-flask/
+
+- Query Parameters: https://stackabuse.com/get-request-query-parameters-with-flask/
+
+- Documentação oficial: https://flask.palletsprojects.com/en/3.0.x/
+
+### Ajuda com Postman
+
+- Intro: https://learning.postman.com/docs/getting-started/first-steps/sending-the-first-request/
+
+- Importando uma collection: https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/
+
+
+### Busque outras fontes
+
+Fique a vontade para procurar vídeos no youtube caso ache necessário, muitas pessoas aprendem melhor com vídeos.
+
+O ChatGPT usado corretamente pode se tornar um grande parceiro de aprendizado, e te ajudar com conceitos que talvez ainda não estejam tão claros para você, pergunte sobre as ferramentas, integrações e papel de cada um dos elementos presentes nesta tarefa, só não peça por código. Não tome o caminho mais fácil, isso irá te prejudicar mais do que você imagina.
+
 
 ## Requisitos:
 
 1. **Estrutura de Pastas**:
-    * /db: Pasta contendo o banco de dados SQLite e scripts relacionados.
     * app.py: Arquivo principal contendo sua aplicação Flask.
     
 2. **Criação da Base de Dados**:
-    * A base de dados é criada executando um arquivo à parte.
-    * Este arquivo só precisa ser executado uma vez durante o projeto.
+    * As tabelas serão criadas via SQL, executando script de criação na via interface web do ElephantSQL ou via pgAdmin.
+    * Este script será executado apenas uma vez durante o projeto.
 
 3. **Tabelas**:
     * **Livros**: ID (chave primária), Título, Autor, Ano de Publicação, Gênero.
@@ -46,6 +93,3 @@ O objetivo deste exercício é criar um serviço web simples para gerenciar uma 
         3. Escolha a versão do formato (recomendamos a versão 2.1).
         4. Clique em "Export" e salve o arquivo na pasta `postman` do projeto.
     * **Observação**: Não se preocupe se o arquivo exportado tiver o mesmo nome do arquivo original. Você pode sobrescrever o arquivo existente.
-
-
-Obs. O uso do arquivo `db_utils.py` é opcional nesta atividade.
